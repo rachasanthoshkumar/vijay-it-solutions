@@ -1,6 +1,8 @@
 import { navLinks } from '../data/siteData.js';
 
 export default function Footer() {
+  const getLinkHref = (href) => (href.startsWith('#') ? `/${href}` : href);
+
   return (
     <footer className="bg-ink py-10 text-white">
       <div className="container-shell">
@@ -13,7 +15,11 @@ export default function Footer() {
           </a>
           <div className="flex flex-wrap gap-x-6 gap-y-3">
             {navLinks.map((link) => (
-              <a key={link.href} href={link.href} className="text-sm font-semibold text-white/66 transition hover:text-white">
+              <a
+                key={link.href}
+                href={getLinkHref(link.href)}
+                className="text-sm font-semibold text-white/66 transition hover:text-white"
+              >
                 {link.label}
               </a>
             ))}
