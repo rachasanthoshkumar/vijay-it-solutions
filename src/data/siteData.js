@@ -254,7 +254,7 @@ export const services = [
 ];
 
 export const stats = [
-  { value: '280+', label: 'Projects launched' },
+  { value: '80+', label: 'Projects launched' },
   { value: '98%', label: 'Client satisfaction' },
   { value: '24/7', label: 'Support coverage' }
 ];
